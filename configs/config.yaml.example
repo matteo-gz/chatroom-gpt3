@@ -13,6 +13,7 @@ data:
   openai:
     token: "put your api key to here" # open ai token
     code: ""  # allow empty, use bot code to limit other people
+    proxy: "" # http proxy url e.g. http://127.0.0.1:7890
     config: #  open ai config https://platform.openai.com/docs/api-reference/completions
       model: "text-davinci-003"
       suffix:
