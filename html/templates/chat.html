@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<head>
+    <meta charset="UTF-8">
+    <title>web</title>
+    <link href="/html/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/html/css/bootstrap-icons.css">
+    <link href="/html/css/self.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;position: fixed;width: 100vw;">
+        <div id="f1" class="flex-column" style="overflow-y: auto;height:  80%">
+            <div class="text-secondary">
+                <a class="btn btn-outline-link  btn-sm" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                   aria-expanded="false" aria-controls="collapseExample">
+                    <i class="bi-wrench"></i>
+                </a>
+            </div>
+            <div class="row">
+                <div class="collapse col-3" id="collapseExample">
+                    <form>
+                        <div class="mb-3">
+                            <label for="yourName1" class="form-label">your name</label>
+                            <input type="text" class="form-control" id="yourName1" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="botcode1" class="form-label">bot code</label>
+                            <input type="text" class="form-control" id="botcode1" placeholder="">
+                        </div>
+                        <!--                        enter btn-->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label"
+                                   for="flexSwitchCheckDefault"><kbd>shift</kbd>+<kbd>Enter</kbd> for send</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="askbot1">always @bot</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="askbot1">
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="sw2">show microphone button</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="sw2">
+                        </div>
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="sw3">show robot button</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="sw3">
+                        </div>
+
+
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="speech1">voice speech</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="speech1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="select1" class="form-label">voices</label>
+                            <select class="form-select" id="select1" aria-label="Default select example">
+                            </select>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div id="list1">
+
+
+
+            </div>
+
+        </div>
+
+        <div class="flex-column position-absolute bottom-0 start-0" style="height:20%;">
+            <div class="row">
+                <div class="col-11">
+                    <label id="label2" for="form1" class="form-label text-secondary"></label>
+                    <span id="tmpV2"></span>
+                    <textarea id="form1" class="form-control" rows="3"></textarea>
+
+                </div>
+                <div class="col-1  align-self-end clearfix">
+                    <div class="btn-group-vertical float-end" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-secondary  btn-sm " id="voice1"><i
+                                class="bi-mic-fill"></i></button>
+
+                        <button type="button" class="btn btn-outline-secondary  btn-sm " id="submit-btn"><i
+                                class="bi-robot"></i></button>
+                        <button type="button" class="btn btn-outline-secondary  btn-sm " id="submit-btn2"><i
+                                class="bi-send-fill"></i></button>
+                        <button type="button" class="btn btn-outline-secondary  btn-sm " id="submit-btn3"><i
+                                class="bi-robot"></i></button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto"></strong>
+                    <small></small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="/html/js/bootstrap.bundle.min.js"></script>
+<script src="/html/js/common.js"></script>
+<script src="/html/js/biz.js"></script>
+</html>

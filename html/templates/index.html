@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>room</title>
+    <link href="/html/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .middle {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <div class=" d-flex align-items-center justify-content-center"
+         style="height: 350px;">
+
+        <div class="row">
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="yourName1" placeholder="chat path">
+            </div>
+            <div class="col-sm-3">
+                <button type="button" id="j" class="btn btn-primary btn-sm">jump</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/html/js/bootstrap.bundle.min.js"></script>
+<script src="/html/js/common.js"></script>
+<script>
+    window.onload = function () {
+        document.getElementById("yourName1").value=getCookie("room")
+    }
+    document.getElementById("yourName1").addEventListener("change", function () {
+        writeCookie("room", this.value)
+    })
+    document.getElementById("j").addEventListener('click', function () {
+        window.location.href = "/chat/" + getCookie("room")
+    })
+</script>
+</html>

@@ -1,0 +1,31 @@
+server:
+  http:
+    addr: 0.0.0.0:8000 # http://127.0.0.1:8000
+    timeout: 60s  # http call timeout
+  grpc:
+    addr: 0.0.0.0:9000
+    timeout: 1s
+  debug: false
+  chat:
+    mode: "group" # one,group
+    path: "" # chat room url:allow empty,e.g.  http://127.0.0.1:8000/chat/path
+data:
+  openai:
+    token: "put your api key to here" # open ai token
+    code: ""  # allow empty, use bot code to limit other people
+    config: #  open ai config https://platform.openai.com/docs/api-reference/completions
+      model: "text-davinci-003"
+      suffix:
+      max_tokens: 2048
+      temperature: 0.8
+      top_p: 1
+      n:
+      stream:
+      logprobs: 1
+      echo:
+      stop:
+      presence_penalty: 0.6
+      frequency_penalty: 0
+      best_of:
+      logit_bias:
+      user:

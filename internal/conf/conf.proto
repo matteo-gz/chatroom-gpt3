@@ -1,0 +1,74 @@
+syntax = "proto3";
+package kratos.api;
+
+option go_package = "chatbot/internal/conf;conf";
+
+import "google/protobuf/duration.proto";
+
+message Bootstrap {
+  Server server = 1;
+  Data data = 2;
+}
+
+message Server {
+  message HTTP {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  message GRPC {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  message Chat {
+    string path = 1;
+    string mode = 2; // one,group
+  }
+  HTTP http = 1;
+  GRPC grpc = 2;
+  Chat chat = 3;
+  bool debug=4;
+
+}
+
+message Data {
+  message Database {
+    string driver = 1;
+    string source = 2;
+  }
+  message Redis {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration read_timeout = 3;
+    google.protobuf.Duration write_timeout = 4;
+  }
+  Database database = 1;
+  Redis redis = 2;
+  message Openai{
+    string token = 1;
+    string proxy = 2;
+    string code = 3;
+    message Config{
+      string         model = 1;
+      optional string         prompt = 2;
+      optional string         suffix = 3;
+      optional int64          max_tokens = 4;
+      optional double        temperature = 5;
+      optional float        top_p = 6;
+      optional int64            n = 7;
+      optional bool           stream = 8;
+      optional int64            logprobs = 9;
+      optional bool           echo = 10;
+      repeated string       stop = 11;
+      optional float        presence_penalty = 12;
+      optional float        frequency_penalty = 13;
+      optional int64            best_of = 14;
+      map<string, int64> logit_bias = 15;
+      optional string         user = 16;
+    }
+    Config config = 4;
+  }
+
+  Openai  openai = 3;
+}

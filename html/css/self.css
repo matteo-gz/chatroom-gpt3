@@ -1,0 +1,24 @@
+.msg-box{
+    padding: 10px 16px;
+}
+.msg-content{
+    margin: 20px;
+    padding: 10px 16px;
+    max-width: 75vw;
+}
+.msg-user{
+    margin-left: 80px;
+    align-self: flex-end;
+}
+.msg-other{
+    margin-right: 80px;
+    align-self: flex-start;
+}
+.msg-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.msg-reply{
+    margin-top: 10px;
+
+}
