@@ -24,10 +24,13 @@ cp configs/config.yaml.example bin/config.yaml
 ```
 
 # 配置config.yaml 文件
+
 data.openai.token 项 替换成openAi的key就行
+
 data.openai.proxy 项 可以贴上http代理地址
 
-![](./doc/cover.png)
 ### api key
 
 https://openai.com/api/
+
+![](./doc/cover.png)
