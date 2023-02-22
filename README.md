@@ -8,6 +8,13 @@
 # open http://127.0.0.1:8000/
 ```
 
+### docker-compose 
+```
+cp docker-compose.yaml.example docker-compose.yaml
+cp configs/config.yaml.example bin/config.yaml 
+docker-compose up -d
+```
+
 ### 自己编译 (build by yourself)
 ```
 make pack

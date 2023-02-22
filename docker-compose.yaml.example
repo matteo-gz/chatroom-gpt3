@@ -1,0 +1,17 @@
+version: "3"
+services:
+  chatbot:
+    build:
+      context: ./
+    container_name: chatbot
+    volumes:
+      - ./bin:/data/conf
+    privileged: true
+    stdin_open: true
+    tty: true
+    ports:
+      - "80:8000"
+    command:
+      - "/app/chatbot"
+      - "-conf"
+      - "/data/conf/config.yaml"
